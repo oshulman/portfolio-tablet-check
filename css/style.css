@@ -1,0 +1,411 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: white; /*#ddd;*/
+	font-size: 18px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/*font-weight: lighter;*/
+	margin: 0;
+	padding: 0;
+	color: #152238;
+}
+
+/*FIXME Make header look nice */
+header{
+	text-align: center;
+	color: #152238;
+	padding: 0px;
+	letter-spacing: 2px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+
+}
+
+header > img{
+	width: 100%;
+}
+
+header > h1{
+	margin: 20px;
+}
+
+
+.skip a{
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  transition: transform 0.3s;
+}	
+
+.skip a:focus{
+	top: 0px;
+}
+
+
+.name-wrapper{
+	width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: -5px;
+  font-size: 24px;
+}
+}
+
+nav{
+	background-color: white; /*#ddd;*/
+	/*padding:  25px 0;
+	text-transform: uppercase;*/
+	letter-spacing: 2px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+nav ul{
+	list-style-type: none;
+}
+
+nav li{
+	/*display: inline;*/
+	flex-direction: row;
+	padding-bottom: 20px;
+}
+
+nav a{
+	color: #152238;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+
+nav a:hover{
+	font-weight: bold;
+	font-style: italic;
+	color: #5e7b51;/* #009C9D;*/ 
+	/*#152238;*/
+	/* text-shadow: 3px 3px #009C9D;
+	transition: 0.3s ease;*/
+	border: solid; 
+	border-color: #5e7b51;
+	border-radius: 8px;
+	padding: 3px 5px;
+}
+
+/* remember to fill in for accessibility */
+:focus{
+	border-width: 2px;
+	border-style: solid;
+}
+
+/*need different soln because not working*/
+
+/* makes menu items bold and backshadowed when current page */
+nav .current{
+	font-weight: bold;
+	/*font-style: italic;*/
+	color: #5e7b51; /*#009C9D; #152238;*/
+	/* text-shadow: 3px 3px #009C9D;*/
+	transition: 0.3s ease;
+	/*border-bottom: solid;
+	border-right: solid; 
+	border-bottom-right-radius: 8px;*/
+	border: solid;
+	border-width: thin;
+	border-radius: 8px;
+	padding: 5px;
+	width: 100%;
+	text-transform: uppercase;
+
+}
+
+#contact-menu-item{
+	padding-bottom: 0px;
+}
+
+.about-page{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	padding: 0px;
+	grid-gap: 10px;
+}
+
+
+
+.about-page img{
+	grid-column: 2 / span 1;
+	border-radius: 8px;
+	padding: 0px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.about-page p{
+	grid-column: 1 / span 3;
+	color: #152238;
+	line-height: 30px;
+}
+
+.other{
+	color: #152238;
+	text-align: center;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.other h2{
+	padding-top: 20px;
+}
+
+.other h3{
+	font-weight: normal;
+}
+
+
+
+.gal_img{
+	width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-right: auto;
+	margin-left: auto;
+  /*
+  grid-column: 2 / span 1;
+  justify-content: center;
+  */
+}
+
+.gallery h2{
+	margin-top: 10px;
+	text-align: center;
+	color: #152238;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
+.gallery div{
+	margin: 40px 0px;
+}
+
+@media screen and (min-width: 768px){
+	.gallery{
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 40px;
+		padding: 20px;
+	}
+
+	.gal_img{
+		width: 100%;
+  	height: 100%;
+   	object-fit: cover;
+   	border-radius: 8px;
+	}
+}
+
+#podcast-grid, #crossword-grid, #tv-show-grid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.other img{
+	border-radius: 8px;
+	margin-top: 10px;
+}
+
+.other > div > div{
+	border: solid;
+	border-width: thin;
+	border-radius: 8px;
+	padding: 10px 0px;
+	margin: 10px 10px 30px 10px;
+}
+
+.other > div > div > div{
+	border: solid;
+	border-width: thin;
+	border-radius: 8px;
+	margin: 10px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+#crossword-grid img{
+	max-width: 250px;
+	max-height: 250px;
+}
+
+h1{
+	font-size: 40px;
+	font-weight: normal;
+	margin-bottom: 40px;
+}
+
+.other h2{
+	font-size: 40px;
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+
+#crossword-grid h3, #podcast-grid h3, #tv-show-grid h3{
+	font-weight: bold;
+}
+
+.other ul{
+	list-style-type: circle;
+}
+
+.other li{
+	list-style-type: circle;
+}
+
+.resume-text{
+	margin-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: #152238;
+	line-height: 25px;
+}
+
+.resume-text h1{
+	text-align: center;
+	font-size: 24px;
+	padding: 5px;
+	letter-spacing: 2px;
+}
+
+.resume-text h2{
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+.resume-text h3{
+	font-style: italic;
+	font-weight: normal;
+}
+
+.resume-text h4{
+	font-weight: normal;
+}
+/*
+nav .current:after{
+	content: "🪴";
+}
+U+1FAB4*/
+
+/*does quite work as desired
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 33%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
+
+.row img{
+	max-width: 300px;
+	height: auto;
+}
+
+.column img{
+	max-width: 100%;
+	height: auto;
+}
+*/
+/*
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+*/
+
+#headshot{
+	align-items: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid black; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  margin: 6px 16px 3px 3px;
+  resize: vertical;
+}
+
+#name, #email, #subject{
+	margin-bottom: 20px;
+}
+
+textarea{
+	height: 200px;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: #5e7b51;
+  padding: 12px 20px;
+  border: solid;
+  border-radius: 4px;
+  border-color: #5e7b51;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  font-style: italic;
+}
+
+.contact-container {
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px;
+}
+
+p{
+	padding: 20px;
+	text-align: center;
+}
+
+footer{
+	background-color: white; /*#ddd;*/
+	color: #152238;
+	text-align: center;
+	width: 100%;
+	letter-spacing: 2px;
+	box-sizing: border-box;
+}
+
+/*FIXME:  design for when narrow enough because menu collapses in way that words overlap*/
